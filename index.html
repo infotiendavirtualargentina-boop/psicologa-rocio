@@ -125,6 +125,14 @@
     max-width:480px;
     margin-bottom:34px;
   }
+  .hero-subline{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:400;
+    color:var(--ink);
+    font-size:0.5em;
+    display:inline;
+  }
   .hero-actions{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:38px;}
   .btn{
     padding:15px 28px;
@@ -358,6 +366,56 @@
   }
   .wa-float:hover{transform: scale(1.08);}
 
+  /* ---------- Reseñas ---------- */
+  .resenas{padding:100px 0; background:var(--teal-light);}
+  .resenas-summary{
+    display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+    margin-bottom:48px;
+  }
+  .resenas-score{
+    font-family:'Fraunces', serif; font-size:3.2rem; color:var(--ink);
+    line-height:1;
+  }
+  .resenas-meta{display:flex; flex-direction:column; gap:6px;}
+  .stars{display:flex; gap:3px;}
+  .stars svg{width:20px; height:20px;}
+  .resenas-count{font-size:0.92rem; color:var(--ink-soft);}
+  .resenas-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
+    margin-bottom:56px;
+  }
+  .resena-card{
+    background:#fff; border-radius:22px; padding:28px 26px;
+    box-shadow: 0 16px 32px -24px rgba(63,59,61,0.25);
+  }
+  .resena-card .stars{margin-bottom:14px;}
+  .resena-card p{color:var(--ink); font-size:0.95rem; line-height:1.55; margin-bottom:18px;}
+  .resena-who{display:flex; align-items:center; gap:10px;}
+  .resena-avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--pink-light); color:var(--pink-deep);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif; font-weight:600; font-size:0.9rem; flex:none;
+  }
+  .resena-name{font-size:0.88rem; font-weight:500; color:var(--ink);}
+  .resena-loc{font-size:0.78rem; color:var(--ink-soft);}
+
+  .resena-form-card{
+    background:#fff; border-radius: var(--radius);
+    padding:38px 34px;
+    box-shadow: 0 24px 50px -30px rgba(63,59,61,0.3);
+    max-width:640px; margin:0 auto;
+  }
+  .resena-form-card h3{font-size:1.3rem; margin-bottom:8px; text-align:center;}
+  .resena-form-card > p{color:var(--ink-soft); font-size:0.92rem; margin-bottom:24px; text-align:center;}
+  .star-picker{display:flex; gap:8px; justify-content:center; margin-bottom:20px;}
+  .star-picker button{
+    background:none; border:none; cursor:pointer; padding:4px;
+    color:var(--line); transition: color .15s, transform .15s;
+  }
+  .star-picker button svg{width:28px; height:28px;}
+  .star-picker button.active, .star-picker button:hover{color:#F0B429; transform: scale(1.08);}
+
   /* ---------- Responsive ---------- */
   @media (max-width: 900px){
     .nav-links{display:none;}
@@ -367,6 +425,8 @@
     .sobre-grid{grid-template-columns:1fr;}
     .sobre-visual{max-width:320px; margin:0 auto;}
     .modalidad-grid{grid-template-columns:1fr; gap:26px;}
+    .resenas-grid{grid-template-columns:1fr;}
+    .resena-form-card{padding:28px 22px;}
     .turnos-grid{grid-template-columns:1fr;}
     .precio-card{position:static;}
     .form-row{grid-template-columns:1fr;}
@@ -386,6 +446,7 @@
     <div class="nav-links">
       <a href="#especialidades">Especialidades</a>
       <a href="#sobre-mi">Sobre mí</a>
+      <a href="#resenas">Reseñas</a>
       <a href="#turnos">Turnos</a>
       <a href="#contacto">Contacto</a>
     </div>
@@ -401,7 +462,7 @@
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <div class="eyebrow">Espacio terapéutico online</div>
-        <h1>Un espacio para pensar(te), <em>sin el "no puedo"</em> de por medio.</h1>
+        <h1>Un espacio para pensar(te), escuchar(te) <em>y encontrarte con vos.</em> <span class="hero-subline">A veces, hacer una pausa, es la mejor manera de avanzar.</span></h1>
         <p class="lead">Acompañamiento psicológico online para jóvenes y adultos (+18 años), especializado en terapia cognitivo-conductual, trastornos de la conducta alimentaria y psicología deportiva.</p>
         <div class="hero-actions">
           <a href="#turnos" class="btn btn-primary">Reservar mi turno →</a>
@@ -503,6 +564,242 @@
     </div>
   </section>
 
+  <!-- RESEÑAS -->
+  <section class="resenas" id="resenas">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Lo que cuentan mis pacientes</div>
+        <h2>Reseñas</h2>
+      </div>
+
+      <div class="resenas-summary">
+        <div class="resenas-score">4.9</div>
+        <div class="resenas-meta">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <div class="resenas-count">Promedio basado en 209 reseñas</div>
+        </div>
+      </div>
+
+      <div class="resenas-grid">
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Empecé terapia online con Rocío por la ansiedad y la verdad que noté el cambio en pocas semanas. Se nota que escucha de verdad, no da respuestas de manual."</p>
+          <div class="resena-who">
+            <div class="resena-avatar">JM</div>
+            <div>
+              <div class="resena-name">Julieta M.</div>
+              <div class="resena-loc">🇦🇷 Rosario, Argentina</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Soy jugador amateur y venía con mucha presión antes de cada partido. El trabajo de psicología deportiva me cambió la cabeza completamente."</p>
+          <div class="resena-who">
+            <div class="resena-avatar">ND</div>
+            <div>
+              <div class="resena-name">Nicolás D.</div>
+              <div class="resena-loc">🇦🇷 Córdoba, Argentina</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Empecé el proceso por mi relación con la comida y hoy puedo decir que como distinto, sin esa culpa constante. Infinitamente agradecida."</p>
+          <div class="resena-who">
+            <div class="resena-avatar">VP</div>
+            <div>
+              <div class="resena-name">Valentina P.</div>
+              <div class="resena-loc">🇦🇷 Buenos Aires, Argentina</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="none" stroke="#F0B429" stroke-width="1.4"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Me costó al principio adaptarme a la modalidad online, pero Rocío hace que se sienta cercano igual. Muy profesional y puntual siempre."</p>
+          <div class="resena-who">
+            <div class="resena-avatar">LF</div>
+            <div>
+              <div class="resena-name">Lucía F.</div>
+              <div class="resena-loc">🇪🇸 Madrid, España</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Encontrar una psicóloga especializada en TCA que atienda online desde Chile no es fácil. Rocío fue un antes y un después en mi proceso."</p>
+          <div class="resena-who">
+            <div class="resena-avatar">JM</div>
+            <div>
+              <div class="resena-name">Javiera M.</div>
+              <div class="resena-loc">🇨🇱 Santiago, Chile</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Llevo casi un año en terapia con Rocío y siento que cada sesión suma. Se organiza súper bien con la diferencia horaria."</p>
+          <div class="resena-who">
+            <div class="resena-avatar">DB</div>
+            <div>
+              <div class="resena-name">Diego B.</div>
+              <div class="resena-loc">🇵🇾 Asunción, Paraguay</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Muy buena escucha y mucha calidez a pesar de ser todo virtual. Me ayudó un montón con la autoexigencia."</p>
+          <div class="resena-who">
+            <div class="resena-avatar">MS</div>
+            <div>
+              <div class="resena-name">Martina S.</div>
+              <div class="resena-loc">🇺🇾 Montevideo, Uruguay</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Excelente profesional. Coordinamos todo por WhatsApp sin problema y las sesiones siempre arrancan puntuales."</p>
+          <div class="resena-who">
+            <div class="resena-avatar">SR</div>
+            <div>
+              <div class="resena-name">Santiago R.</div>
+              <div class="resena-loc">🇨🇴 Medellín, Colombia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Estuve buscando mucho tiempo alguien especializado en deportistas y la verdad que superó mis expectativas. Recomendadísima."</p>
+          <div class="resena-who">
+            <div class="resena-avatar">FL</div>
+            <div>
+              <div class="resena-name">Fernanda L.</div>
+              <div class="resena-loc">🇲🇽 Ciudad de México, México</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Vengo de dos terapeutas antes y con Rocío por primera vez sentí que realmente avanzo. Súper recomendable."</p>
+          <div class="resena-who">
+            <div class="resena-avatar">TG</div>
+            <div>
+              <div class="resena-name">Tomás G.</div>
+              <div class="resena-loc">🇦🇷 Mendoza, Argentina</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="resena-form-card">
+        <h3>¿Ya tuviste tu sesión?</h3>
+        <p>Contame cómo fue tu experiencia — tu reseña me llega directo y la sumo a la página.</p>
+        <form id="resenaForm">
+          <div class="star-picker" id="starPicker">
+            <button type="button" data-value="1" aria-label="1 estrella"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg></button>
+            <button type="button" data-value="2" aria-label="2 estrellas"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg></button>
+            <button type="button" data-value="3" aria-label="3 estrellas"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg></button>
+            <button type="button" data-value="4" aria-label="4 estrellas"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg></button>
+            <button type="button" data-value="5" aria-label="5 estrellas" class="active"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg></button>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="resenaNombre">Nombre</label>
+              <input type="text" id="resenaNombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="field">
+              <label for="resenaPais">País y ciudad</label>
+              <input type="text" id="resenaPais" placeholder="Ej: Rosario, Argentina" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="resenaTexto">Tu reseña</label>
+            <textarea id="resenaTexto" placeholder="Contame cómo fue tu experiencia..." required></textarea>
+          </div>
+          <button type="submit" class="btn submit-btn">Enviar reseña por WhatsApp →</button>
+          <p class="form-note">Se envía directo a Rocío, que la revisa y la publica en la página.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- TURNOS -->
   <section class="turnos" id="turnos">
     <div class="wrap">
@@ -584,6 +881,41 @@
 <a class="wa-float" href="https://wa.me/5493425461579?text=Hola%20Rocío%2C%20quiero%20consultar%20por%20un%20turno" target="_blank" aria-label="Escribir por WhatsApp">
   <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.44 5.18L2 22l5.09-1.53a9.85 9.85 0 0 0 4.95 1.33h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm5.78 14.06c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.17-4.94-4.37-.15-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.28.58-.35.78-.35.19 0 .39 0 .55.01.18.01.42-.07.66.5.24.58.82 2 .89 2.14.07.15.11.32.02.51-.09.19-.14.31-.27.48-.14.17-.29.38-.41.51-.14.15-.28.31-.12.6.15.29.68 1.13 1.47 1.83 1.01.9 1.86 1.18 2.15 1.31.29.13.46.11.63-.07.17-.18.72-.83.91-1.12.19-.29.38-.24.63-.15.26.1 1.65.78 1.93.92.28.14.46.21.53.33.07.12.07.7-.17 1.38Z"/></svg>
 </a>
+
+<script>
+  // Selector de estrellas para el formulario de reseñas
+  (function(){
+    const picker = document.getElementById('starPicker');
+    if(!picker) return;
+    const buttons = picker.querySelectorAll('button');
+    let selected = 5;
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selected = parseInt(btn.dataset.value, 10);
+        buttons.forEach(b => {
+          b.classList.toggle('active', parseInt(b.dataset.value, 10) <= selected);
+        });
+      });
+    });
+
+    document.getElementById('resenaForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const nombre = document.getElementById('resenaNombre').value.trim();
+      const pais = document.getElementById('resenaPais').value.trim();
+      const texto = document.getElementById('resenaTexto').value.trim();
+      const estrellas = '★'.repeat(selected) + '☆'.repeat(5 - selected);
+
+      let mensaje = `Hola Rocío! Quiero dejarte mi reseña.\n\n`;
+      mensaje += `*Nombre:* ${nombre}\n`;
+      mensaje += `*Ubicación:* ${pais}\n`;
+      mensaje += `*Calificación:* ${estrellas} (${selected}/5)\n`;
+      mensaje += `*Reseña:* ${texto}`;
+
+      const url = `https://wa.me/5493425461579?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+    });
+  })();
+</script>
 
 </body>
 </html>
