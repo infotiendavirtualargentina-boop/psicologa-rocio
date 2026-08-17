@@ -92,7 +92,7 @@
 
   /* ---------- Hero ---------- */
   .hero{
-    padding:88px 0 60px;
+    padding:88px 0 30px;
     overflow:hidden;
   }
   .hero .blob-a{
@@ -132,10 +132,11 @@
     font-style:italic;
     font-weight:400;
     color:var(--ink);
-    font-size:0.5em;
-    display:inline;
+    font-size:0.62em;
+    display:block;
+    margin-top:14px;
   }
-  .hero-actions{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:38px;}
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:0;}
   .btn{
     padding:15px 28px;
     border-radius:999px;
@@ -200,7 +201,7 @@
   .center{text-align:center; margin-left:auto; margin-right:auto;}
 
   /* ---------- Especialidades ---------- */
-  .especialidades{padding:100px 0 80px; background:var(--teal-light);}
+  .especialidades{padding:64px 0 80px; background:var(--teal-light);}
   .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:26px; position:relative; z-index:1;}
   .card{
     background:#fff; border-radius: var(--radius);
@@ -537,16 +538,10 @@
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <div class="eyebrow">Espacio terapéutico online</div>
-        <h1>Un espacio para pensar(te), escuchar(te) <em>y encontrarte con vos.</em> 
-          <span class="hero-subline">A veces, hacer una pausa, es la mejor manera de avanzar.</span></h1>
+        <h1>Un espacio para pensar(te), escuchar(te) <em>y encontrarte con vos.</em> <span class="hero-subline">A veces, hacer una pausa, es la mejor manera de avanzar.</span></h1>
         <p class="lead">Acompañamiento psicológico online para jóvenes y adultos (+18 años), especializado en terapia cognitivo-conductual, trastornos de la conducta alimentaria y psicología deportiva.</p>
         <div class="hero-actions">
-          <a href="#turnos" class="btn btn-primary">Reservar mi turno →</a>
-        </div>
-        <div class="hero-tags">
-          <span class="tag">100% Online</span>
-          <span class="tag">Jóvenes y adultos (+18 años)</span>
-          <span class="tag">Santa Fe, Argentina</span>
+          <a href="https://turnito.app/c/psicocarboni" target="_blank" rel="noopener" class="btn btn-primary">Reservar mi turno →</a>
         </div>
       </div>
       <div class="hero-photo">
@@ -1164,7 +1159,7 @@
     <div class="footer-col">
       <h4>Redes</h4>
       <a href="https://instagram.com/psicologa.rociocarboni" target="_blank">📷 @psicologa.rociocarboni</a>
-      <a href="#turnos">📅 Reservar turno</a>
+      <a href="https://turnito.app/c/psicocarboni" target="_blank" rel="noopener">📅 Reservar turno</a>
     </div>
   </div>
   <div class="wrap footer-bottom">
