@@ -496,6 +496,8 @@
     .nav-links{display:none;}
     .nav-cta{padding:8px 14px; font-size:0.76rem;}
     .brand img{height:34px;}
+    .brand-text{font-size:0.85rem;}
+    .brand-text span{font-size:0.5rem; letter-spacing:0.1em;}
     nav.wrap{height:70px;}
     .hero-grid{grid-template-columns:1fr; gap:44px;}
     .hero-photo{order:-1; max-width:280px; margin:0 auto;}
@@ -510,6 +512,11 @@
     .form-row{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr; gap:36px;}
     .form-card{padding:28px 22px;}
+  }
+
+  @media (max-width: 400px){
+    .brand-text span{display:none;}
+    .nav-cta{padding:7px 12px; font-size:0.7rem;}
   }
 </style>
 </head>
