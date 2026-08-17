@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#FFFDFC">
 <title>Lic. Rocío Carboni | Psicóloga</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +22,10 @@
     --paper: #FFFDFC;
     --line: rgba(63,59,61,0.12);
     --radius: 28px;
+    color-scheme: light only;
   }
+
+  html{background-color: var(--paper) !important;}
 
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
@@ -393,6 +398,10 @@
     display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
     margin-bottom:56px;
   }
+  .resenas-grid-compact{
+    grid-template-columns:1fr 1fr 1fr;
+    max-width:1100px; margin:0 auto 48px;
+  }
   .resena-card{
     background:#fff; border-radius:22px; padding:28px 26px;
     box-shadow: 0 16px 32px -24px rgba(63,59,61,0.25);
@@ -650,6 +659,62 @@
         <div class="eyebrow" style="justify-content:center;">Tu opinión importa</div>
         <h2>Dejá tu reseña</h2>
         <p>Estoy dando mis primeros pasos con esta agenda online — si ya tuviste tu sesión, contame cómo fue tu experiencia. Cada reseña me ayuda un montón y se va a ir sumando acá.</p>
+      </div>
+
+      <div class="resenas-grid resenas-grid-compact">
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Cuando la conocí a Ro, fue el momento justo en el que tenía que empezar terapia. Me ayudó con herramientas a transitar paso a paso el momento por el que estaba atravesando, fueron años de terapia, pero sin dudas conocerla en el momento justo, lo fue todo. Gracias por acompañar con amor, calidez y profesionalismo Ro. 🩷"</p>
+          <div class="resena-who">
+            <div class="resena-avatar">BM</div>
+            <div>
+              <div class="resena-name">B. Micaela</div>
+              <div class="resena-loc">🇦🇷 Santa Fe capital, Argentina</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Me salvaste la vida. Me enseñas. Me cuidas. Me haces encontrarme conmigo misma. Me enseñas a elegirme. En los peores momentos sos la luz en el camino. Sos re profesional, atenta, empática, siempre al pie del cañón queriendo y trabajando para lo mejor de tus pacientes."</p>
+          <div class="resena-who">
+            <div class="resena-avatar">P</div>
+            <div>
+              <div class="resena-name">Paula</div>
+              <div class="resena-loc">🇦🇷 Santa Fe, Argentina</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+            <svg viewBox="0 0 20 20" fill="#F0B429"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8L10 1.5Z"/></svg>
+          </div>
+          <p>"Excelente profesional! Uso y recomiendo ❤️ La mejor de todas 🥺"</p>
+          <div class="resena-who">
+            <div class="resena-avatar">V</div>
+            <div>
+              <div class="resena-name">Valentina</div>
+              <div class="resena-loc">🇦🇷 Santa Fe, Argentina</div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="resena-form-card">
