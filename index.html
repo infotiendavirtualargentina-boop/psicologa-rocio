@@ -380,6 +380,54 @@
   }
   .wa-float:hover{transform: scale(1.08);}
 
+  /* ---------- Herramientas de autoayuda ---------- */
+  .autoayuda{padding:90px 0; background: var(--pink-light);}
+  .autoayuda-card{
+    max-width:920px; margin:0 auto;
+    background:#fff; border-radius: var(--radius);
+    display:grid; grid-template-columns:0.85fr 1.15fr;
+    overflow:hidden;
+    box-shadow: 0 24px 50px -30px rgba(63,59,61,0.3);
+  }
+  .autoayuda-visual{
+    background: linear-gradient(150deg, var(--pink-deep), var(--pink));
+    display:flex; align-items:center; justify-content:center;
+    padding:40px; position:relative;
+  }
+  .autoayuda-visual .ebook-icon{
+    width:150px; height:190px; background:#fff; border-radius:10px;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.35);
+    display:flex; align-items:center; justify-content:center;
+    transform: rotate(-4deg);
+  }
+  .autoayuda-body{padding:40px 40px 40px 36px;}
+  .promo-badge{
+    display:inline-flex; align-items:center; gap:6px;
+    background: var(--teal-deep); color:#fff;
+    font-size:0.76rem; font-weight:600; letter-spacing:0.03em;
+    padding:6px 14px; border-radius:999px; margin-bottom:16px;
+  }
+  .autoayuda-body h3{font-size:1.5rem; margin-bottom:12px; line-height:1.25;}
+  .autoayuda-body > p{color:var(--ink-soft); font-size:0.95rem; margin-bottom:22px;}
+  .autoayuda-price-row{
+    display:flex; align-items:baseline; gap:12px; margin-bottom:6px; flex-wrap:wrap;
+  }
+  .price-old{
+    font-size:1.05rem; color:var(--ink-soft);
+    text-decoration:line-through; opacity:0.7;
+  }
+  .price-new{
+    font-family:'Fraunces', serif; font-size:2.1rem; color:var(--pink-deep);
+  }
+  .price-off{
+    font-size:0.78rem; font-weight:600; color:var(--teal-deep);
+    background: var(--teal-light); padding:4px 10px; border-radius:999px;
+  }
+  .autoayuda-countdown{
+    font-size:0.85rem; color:var(--ink-soft); margin-bottom:24px;
+  }
+  .autoayuda-countdown strong{color:var(--pink-deep); font-family:'Fraunces', serif; font-size:0.95rem;}
+
   /* ---------- Reseñas ---------- */
   .resenas{padding:100px 0; background:var(--teal-light);}
   .resenas-summary{
@@ -514,6 +562,9 @@
     .sobre-grid{grid-template-columns:1fr;}
     .sobre-visual{max-width:320px; margin:0 auto;}
     .modalidad-grid{grid-template-columns:1fr; gap:26px;}
+    .autoayuda-card{grid-template-columns:1fr;}
+    .autoayuda-visual{padding:28px;}
+    .autoayuda-body{padding:28px 22px;}
     .resenas-grid{grid-template-columns:1fr;}
     .resena-form-card{padding:28px 22px;}
     .turnos-grid{grid-template-columns:1fr;}
@@ -540,6 +591,7 @@
     <div class="nav-links">
       <a href="#especialidades">Especialidades</a>
       <a href="#sobre-mi">Sobre mí</a>
+      <a href="#autoayuda">Herramientas</a>
       <a href="#resenas">Reseñas</a>
       <a href="#turnos">Turnos</a>
       <a href="#contacto">Contacto</a>
@@ -648,6 +700,38 @@
       <div class="modalidad-item">
         <div class="num">+18</div>
         <div class="lbl">Jóvenes y adultos</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERRAMIENTAS DE AUTOAYUDA -->
+  <section class="autoayuda" id="autoayuda">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="eyebrow" style="justify-content:center;">Recurso descargable</div>
+        <h2>Herramientas de autoayuda</h2>
+      </div>
+
+      <div class="autoayuda-card">
+        <div class="autoayuda-visual">
+          <div class="ebook-icon">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H6.5A2.5 2.5 0 0 0 4 22.5V4.5Z" stroke="#D683A8" stroke-width="1.5"/><path d="M4 17.5A2.5 2.5 0 0 1 6.5 15H20" stroke="#D683A8" stroke-width="1.5"/></svg>
+          </div>
+        </div>
+        <div class="autoayuda-body">
+          <span class="promo-badge">🔥 30% OFF por tiempo limitado</span>
+          <h3>20 Estrategias para Regular la Ansiedad</h3>
+          <p>Una guía práctica en PDF con herramientas concretas para reconocer y manejar la ansiedad en el día a día — pensada para aplicar desde el primer momento, con o sin terapia en curso.</p>
+          <div class="autoayuda-price-row">
+            <span class="price-old">$27.000</span>
+            <span class="price-new">$18.900</span>
+            <span class="price-off">30% OFF</span>
+          </div>
+          <div class="autoayuda-countdown">
+            Precio promocional válido por <strong id="countdownTimer">24:00:00</strong> desde tu primera visita
+          </div>
+          <a href="https://app.dropyfile.net/checkout/ci2awv" target="_blank" rel="noopener" class="btn btn-vibrant" style="width:100%; justify-content:center;">Comprar ahora →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -948,6 +1032,34 @@
         grid.scrollIntoView({behavior:'smooth', block:'start'});
       }
     });
+  })();
+
+  // Contador de 24hs para la promo del ebook (persiste por visitante en localStorage)
+  (function(){
+    const el = document.getElementById('countdownTimer');
+    if(!el) return;
+    const KEY = 'promo_ansiedad_deadline';
+    let deadline = localStorage.getItem(KEY);
+    if(!deadline){
+      deadline = Date.now() + 24*60*60*1000;
+      try{ localStorage.setItem(KEY, deadline); }catch(e){}
+    } else {
+      deadline = parseInt(deadline, 10);
+    }
+    function pad(n){ return String(n).padStart(2,'0'); }
+    function tick(){
+      const diff = deadline - Date.now();
+      if(diff <= 0){
+        el.textContent = '00:00:00';
+        return;
+      }
+      const h = Math.floor(diff / (1000*60*60));
+      const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+      const s = Math.floor((diff % (1000*60)) / 1000);
+      el.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
+    }
+    tick();
+    setInterval(tick, 1000);
   })();
 </script>
 
