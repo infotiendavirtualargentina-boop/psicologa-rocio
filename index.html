@@ -71,8 +71,9 @@
   }
   nav.wrap{
     display:flex; align-items:center; justify-content:space-between;
-    height:84px;
+    min-height:84px; padding-top:12px; padding-bottom:12px;
   }
+  .nav-cta-group{display:flex; flex-direction:column; align-items:flex-end; gap:8px;}
   .brand{display:flex; align-items:center; gap:12px;}
   .brand img{height:46px; width:auto;}
   .brand-text{font-family:'Fraunces', serif; font-size:1.05rem; letter-spacing:0.02em; color:var(--ink);}
@@ -141,7 +142,7 @@
     display:block;
     margin-top:14px;
   }
-  .hero-actions{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:0;}
+  .hero-actions{display:flex; flex-direction:column; align-items:flex-start; gap:14px; margin-bottom:0;}
   .btn{
     padding:15px 28px;
     border-radius:999px;
@@ -168,6 +169,10 @@
     box-shadow: 0 10px 24px -10px rgba(214,131,168,0.55);
   }
   .btn-vibrant:hover{transform:translateY(-2px); box-shadow: 0 14px 28px -10px rgba(214,131,168,0.65);}
+  .nav-cta-group .btn-vibrant{
+    padding:9px 18px; border-radius:999px; font-size:0.82rem;
+    display:flex; align-items:center; gap:8px; text-decoration:none;
+  }
   .hero-tags{display:flex; gap:10px; flex-wrap:wrap;}
   .tag{
     font-size:0.78rem; padding:8px 14px; border-radius:999px;
@@ -569,7 +574,8 @@
     .brand img{height:34px;}
     .brand-text{font-size:0.85rem;}
     .brand-text span{font-size:0.5rem; letter-spacing:0.1em;}
-    nav.wrap{height:70px;}
+    nav.wrap{min-height:70px;}
+    .nav-cta-group .btn-vibrant{padding:7px 14px; font-size:0.72rem;}
     .hero-grid{grid-template-columns:1fr; gap:44px;}
     .hero-photo{order:-1; max-width:280px; margin:0 auto;}
     .cards{grid-template-columns:1fr;}
@@ -590,6 +596,7 @@
   @media (max-width: 400px){
     .brand-text span{display:none;}
     .nav-cta{padding:7px 12px; font-size:0.7rem;}
+    .nav-cta-group .btn-vibrant{padding:6px 12px; font-size:0.68rem;}
   }
 </style>
 </head>
@@ -609,7 +616,10 @@
       <a href="#turnos">Turnos</a>
       <a href="#contacto">Contacto</a>
     </div>
-    <a class="nav-cta" href="https://turnito.app/c/psicocarboni" target="_blank" rel="noopener">Reservar turno</a>
+    <div class="nav-cta-group">
+      <a class="nav-cta" href="https://turnito.app/c/psicocarboni" target="_blank" rel="noopener">Reservar turno</a>
+      <a class="btn-vibrant" href="#autoayuda">Kit de herramientas</a>
+    </div>
   </nav>
 </header>
 
@@ -625,6 +635,7 @@
         <p class="lead">Acompañamiento psicológico online para jóvenes y adultos (+18 años), especializado en terapia cognitivo-conductual, trastornos de la conducta alimentaria y psicología deportiva.</p>
         <div class="hero-actions">
           <a href="https://turnito.app/c/psicocarboni" target="_blank" rel="noopener" class="btn btn-primary">Reservar mi turno →</a>
+          <a href="#autoayuda" class="btn btn-primary">Kit de herramientas</a>
         </div>
       </div>
       <div class="hero-photo">
@@ -1007,6 +1018,7 @@
       <h4>Redes</h4>
       <a href="https://instagram.com/psicologa.rociocarboni" target="_blank">📷 @psicologa.rociocarboni</a>
       <a href="https://turnito.app/c/psicocarboni" target="_blank" rel="noopener">📅 Reservar turno</a>
+      <a href="#autoayuda">📘 Autoayuda</a>
     </div>
   </div>
   <div class="wrap footer-bottom">
