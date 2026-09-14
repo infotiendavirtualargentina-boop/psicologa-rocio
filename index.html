@@ -429,17 +429,18 @@
     background: var(--teal-light); padding:3px 9px; border-radius:999px;
   }
   .coupon-note{
-    display:inline-flex; align-items:center; gap:8px;
-    font-size:0.85rem; color:var(--ink);
+    display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px;
+    font-size:0.8rem; color:var(--ink-soft);
     background: var(--pink-light);
     border:1.5px dashed var(--pink-deep);
     border-radius:12px;
-    padding:9px 14px;
+    padding:12px 14px;
     margin-bottom:16px;
   }
-  .coupon-note strong{
+  .coupon-note .coupon-code{
     color:var(--pink-deep); font-family:'Fraunces', serif; font-weight:700;
-    letter-spacing:0.06em; font-size:1.15rem;
+    letter-spacing:0.08em; font-size:1.25rem;
+    background:#fff; padding:3px 16px; border-radius:8px;
   }
   .autoayuda-countdown{
     font-size:0.8rem; color:var(--ink-soft); margin-bottom:20px;
@@ -733,7 +734,7 @@
     <div class="wrap">
       <div class="section-head center">
         <div class="eyebrow" style="justify-content:center;">Recursos descargables</div>
-        <h2>Herramientas de autoayuda</h2>
+        <h2>Herramientas psicológicas</h2>
       </div>
 
       <div class="autoayuda-grid">
@@ -750,7 +751,7 @@
               <span class="price-new">$18.900</span>
               <span class="price-off">30% OFF</span>
             </div>
-            <div class="coupon-note">Descuento aplicando el cupón <strong>PSICORO</strong> en el checkout</div>
+            <div class="coupon-note"><span>Descuento aplicando el cupón</span><span class="coupon-code">PSICORO</span><span>en el checkout</span></div>
             <div class="autoayuda-countdown">
               Precio promocional válido por <strong id="countdownTimer">24:00:00</strong> desde tu primera visita
             </div>
@@ -771,7 +772,7 @@
               <span class="price-new">$18.900</span>
               <span class="price-off">30% OFF</span>
             </div>
-            <div class="coupon-note">Descuento aplicando el cupón <strong>PSICORO</strong> en el checkout</div>
+            <div class="coupon-note"><span>Descuento aplicando el cupón</span><span class="coupon-code">PSICORO</span><span>en el checkout</span></div>
             <div class="autoayuda-countdown">
               Precio promocional válido por <strong id="countdownTimer2">24:00:00</strong> desde tu primera visita
             </div>
